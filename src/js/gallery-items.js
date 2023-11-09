@@ -27,12 +27,12 @@ export const galleryItems = [
       'https://cdn.pixabay.com/photo/2016/11/18/16/19/flowers-1835619_1280.jpg',
     description: 'Flower Blooms',
   },
-  {
+   {
     preview:
-      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334__340.jpg',
+      'dog.jpg',
     original:
-      'https://cdn.pixabay.com/photo/2018/09/13/10/36/mountains-3674334_1280.jpg',
-    description: 'Alpine Mountains',
+      'https://cdn.pixabay.com/photo/2014/12/21/12/13/dog-574873_1280.jpg',
+    description: 'Beagle Dog',
   },
   {
     preview:
