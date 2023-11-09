@@ -29,7 +29,7 @@ export const galleryItems = [
   },
    {
     preview:
-      'dog.jpg',
+      'https://cdn.pixabay.com/photo/2014/12/21/12/13/dog-574873_1280.jpg',
     original:
       'https://cdn.pixabay.com/photo/2014/12/21/12/13/dog-574873_1280.jpg',
     description: 'Beagle Dog',
