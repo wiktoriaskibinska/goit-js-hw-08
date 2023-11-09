@@ -4,8 +4,8 @@
   max-width: 480px;
   padding: 12px;
   background-color: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
+  border: 3px solid #d34667 ;
+  border-radius: 10px;
 }
 
 .feedback-form label {
@@ -18,12 +18,20 @@
   padding: 8px 12px;
   font: inherit;
   cursor: pointer;
+   border: 3px solid #d34667 ;
+   background-color: #ee99ad;
+   color:#fff;
+}
+.feedback-form button:hover{
+   box-shadow: 3px 3px 4px 4px #ccc;;
 }
 
 input,
 textarea {
   padding: 8px;
   font: inherit;
+   border: 1px solid #d34667 ;
+
 }
 
 textarea {
