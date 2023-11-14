@@ -48,11 +48,10 @@ function onSubmit(evt) {
     evt.preventDefault();
   if (emailInput.value && messageArea.value) {
       form.reset();
-      console.log(storage)
-    localStorage.removeItem('feedback-form-state');
-    
-    storage.email = '';
-    storage.message = '';
+      localStorage.removeItem('feedback-form-state');
+      console.log(storage);
+      storage.email = '';
+      storage.message = '';
   } else {
     alert('Please fill all fields!');
   }
