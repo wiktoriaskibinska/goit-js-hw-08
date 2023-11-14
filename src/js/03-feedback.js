@@ -12,6 +12,18 @@ const storage = {
 
 //function which place data in inputs after reolad
 populateForm();
+function populateForm() {
+    const savedFormData = localStorage.getItem('feedback-form-state');
+
+    if (savedFormData) {
+        const parsedFormData = JSON.parse(savedFormData);
+        emailInput.value = parsedFormData.email;
+        messageArea.value = parsedFormData.message;
+    } else {
+        emailInput.value = '';
+        messageArea.value = '';
+    }
+};
 
 //input listener to set items in local storage
 form.addEventListener("input",throttle(onInput,500))
@@ -28,31 +40,18 @@ function onInput() {
     }))
 };
 
-function populateForm() {
-    const savedFormData = localStorage.getItem('feedback-form-state');
-
-    if (savedFormData) {
-        const parsedFormData = JSON.parse(savedFormData);
-        emailInput.value = parsedFormData.email;
-        messageArea.value = parsedFormData.message;
-    } else {
-        emailInput.value = '';
-        messageArea.value = '';
-    }
-};
-
 //submit listener which handle data removing 
+
 form.addEventListener("submit",onSubmit)
 
 function onSubmit(evt) {
-    evt.preventDefault();
-  if (emailInput.value && messageArea.value) {
-      form.reset();
-      localStorage.removeItem('feedback-form-state');
-      console.log(storage);
-      storage.email = '';
-      storage.message = '';
-  } else {
-    alert('Please fill all fields!');
-  }
+    
+  evt.preventDefault();
+  const storage = {
+    email: emailInput.value,
+    message: messageArea.value,
+  };
+  console.log('Form submitted with data:', storage);
+  localStorage.removeItem('feedback-form-state');
+    form.reset();
 };
