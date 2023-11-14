@@ -30,8 +30,17 @@ input,
 textarea {
   padding: 8px;
   font: inherit;
-   border: 1px solid #d34667 ;
+   border: 3px solid #d34667 ;
+   border-radius: 10px;
 
+}
+input:hover{
+  border-color:  #704f57;
+
+}
+
+textarea:hover{
+border-color: #704f57;
 }
 
 textarea {
